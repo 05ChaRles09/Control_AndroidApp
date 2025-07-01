@@ -1,0 +1,132 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- 音量控制 -->
+        <TextView
+            android:id="@+id/volumeLabel"
+            android:text="音量控制"
+            android:textSize="18sp"
+            android:layout_marginBottom="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <SeekBar
+            android:id="@+id/volumeSeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- 亮度調整 -->
+        <TextView
+            android:id="@+id/brightnessLabel"
+            android:text="亮度調整"
+            android:textSize="18sp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <SeekBar
+            android:id="@+id/brightnessSeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- 系統控制區 -->
+        <TextView
+            android:text="系統控制"
+            android:textSize="18sp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:rowCount="4"
+            android:alignmentMode="alignMargins"
+            android:columnOrderPreserved="false"
+            android:useDefaultMargins="true">
+
+            <Button
+                android:id="@+id/btnWifi"
+                android:text="Wi-Fi 設定"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1" />
+
+            <Button
+                android:id="@+id/btnBluetooth"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="藍牙開關"
+                android:layout_columnWeight="1" />
+
+            <Button
+                android:id="@+id/btnBrightness"
+                android:text="亮度調整"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1" />
+
+            <Button
+                android:id="@+id/btnAirplane"
+                android:text="飛航模式"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1" />
+
+            <Button
+                android:id="@+id/btnMobileData"
+                android:text="行動數據"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1" />
+
+            <Button
+                android:id="@+id/btnPowerSaver"
+                android:text="省電模式"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1" />
+
+            <Button
+                android:id="@+id/btnFlash"
+                android:text="手電筒"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1" />
+
+            <Button
+                android:id="@+id/btnDnd"
+                android:text="勿擾模式"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1" />
+
+        </GridLayout>
+
+        <!-- 主題模式切換 -->
+        <TextView
+            android:text="主題模式切換"
+            android:textSize="18sp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Switch
+            android:id="@+id/switchTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="深色模式" />
+
+    </LinearLayout>
+</ScrollView>
