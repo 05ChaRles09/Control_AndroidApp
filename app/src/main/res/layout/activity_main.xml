@@ -1,132 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    tools:context=".MainActivity">
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
 
-        <!-- 音量控制 -->
         <TextView
-            android:id="@+id/volumeLabel"
-            android:text="音量控制"
-            android:textSize="18sp"
-            android:layout_marginBottom="8dp"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="媒體音量"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <SeekBar
             android:id="@+id/volumeSeekBar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" />
 
-        <!-- 亮度調整 -->
-        <TextView
-            android:id="@+id/brightnessLabel"
-            android:text="亮度調整"
-            android:textSize="18sp"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="8dp"
+        <Button
+            android:id="@+id/btnMute"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:text="靜音/取消靜音" />
+
+        <Space android:layout_width="match_parent" android:layout_height="24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="鈴聲音量"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <SeekBar
+            android:id="@+id/ringVolumeSeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" />
+
+        <Space android:layout_width="match_parent" android:layout_height="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="通知音量"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <SeekBar
+            android:id="@+id/notificationVolumeSeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" />
+
+        <Space android:layout_width="match_parent" android:layout_height="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="鬧鐘音量"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <SeekBar
+            android:id="@+id/alarmVolumeSeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" />
+
+        <Space android:layout_width="match_parent" android:layout_height="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="通話音量"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <SeekBar
+            android:id="@+id/callVolumeSeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" />
+
+        <Space android:layout_width="match_parent" android:layout_height="24dp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="螢幕亮度"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <SeekBar
             android:id="@+id/brightnessSeekBar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" />
 
-        <!-- 系統控制區 -->
+        <Space android:layout_width="match_parent" android:layout_height="24dp" />
+
         <TextView
-            android:text="系統控制"
-            android:textSize="18sp"
-            android:layout_marginTop="24dp"
-            android:layout_marginBottom="12dp"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="系統快捷控制"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <GridLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:columnCount="2"
-            android:rowCount="4"
+            android:columnCount="3"
+            android:layout_marginTop="8dp"
             android:alignmentMode="alignMargins"
-            android:columnOrderPreserved="false"
-            android:useDefaultMargins="true">
+            android:columnOrderPreserved="false">
 
             <Button
                 android:id="@+id/btnWifi"
-                android:text="Wi-Fi 設定"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_columnWeight="1" />
+                android:layout_columnWeight="1"
+                android:text="Wi-Fi"
+                android:layout_margin="4dp"/>
 
             <Button
                 android:id="@+id/btnBluetooth"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="藍牙開關"
-                android:layout_columnWeight="1" />
+                android:layout_columnWeight="1"
+                android:text="藍牙"
+                android:layout_margin="4dp"/>
 
             <Button
                 android:id="@+id/btnBrightness"
-                android:text="亮度調整"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_columnWeight="1" />
+                android:layout_columnWeight="1"
+                android:text="顯示設定"
+                android:layout_margin="4dp"/>
 
             <Button
                 android:id="@+id/btnAirplane"
-                android:text="飛航模式"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_columnWeight="1" />
+                android:layout_columnWeight="1"
+                android:text="飛航模式"
+                android:layout_margin="4dp"/>
 
             <Button
                 android:id="@+id/btnMobileData"
-                android:text="行動數據"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_columnWeight="1" />
+                android:layout_columnWeight="1"
+                android:text="行動數據"
+                android:layout_margin="4dp"/>
 
             <Button
                 android:id="@+id/btnPowerSaver"
-                android:text="省電模式"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_columnWeight="1" />
+                android:layout_columnWeight="1"
+                android:text="省電模式"
+                android:layout_margin="4dp"/>
 
             <Button
                 android:id="@+id/btnFlash"
-                android:text="手電筒"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_columnWeight="1" />
+                android:layout_columnWeight="1"
+                android:text="手電筒"
+                android:layout_margin="4dp"/>
 
             <Button
                 android:id="@+id/btnDnd"
-                android:text="勿擾模式"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_columnWeight="1" />
-
+                android:layout_columnWeight="1"
+                android:text="勿擾模式"
+                android:layout_margin="4dp"/>
         </GridLayout>
 
-        <!-- 主題模式切換 -->
+        <Space android:layout_width="match_parent" android:layout_height="24dp" />
+
         <TextView
-            android:text="主題模式切換"
-            android:textSize="18sp"
-            android:layout_marginTop="24dp"
-            android:layout_marginBottom="8dp"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="主題模式"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <Switch
             android:id="@+id/switchTheme"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:text="深色模式" />
 
-    </LinearLayout>
+        <Space android:layout_width="match_parent" android:layout_height="24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="系統資訊"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="8dp">
+
+        </LinearLayout>
+            <TextView
+                android:id="@+id/tvBatteryStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="電池狀態: N/A"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvStorageStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="儲存空間: N/A"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvRamUsage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="RAM 使用率: N/A"
+                android:textSize="16sp" />
+
+
+        </LinearLayout>
 </ScrollView>

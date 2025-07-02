@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">Location</string>
+    <string name="app_name">Control</string>
+    <string name="app_widget_description">顯示音量和亮度資訊的快捷小工具</string>
 </resources>
